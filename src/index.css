@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -97,5 +93,35 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Noto Sans Arabic', sans-serif;
   }
+}
+
+/* Custom styles for Eid greeting */
+.bg-gradient-eid {
+  background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+}
+
+.ornament {
+  filter: drop-shadow(0 0 5px rgba(246, 173, 85, 0.5));
+}
+
+.glow {
+  filter: drop-shadow(0 0 8px rgba(190, 227, 248, 0.6));
+}
+
+.card-container {
+  perspective: 1000px;
+}
+
+.card {
+  transition: transform 1.2s, box-shadow 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  transform: rotateY(5deg) rotateX(5deg);
+  box-shadow: 
+    -10px 10px 20px rgba(0, 0, 0, 0.2),
+    0 0 30px rgba(190, 227, 248, 0.3);
 }
